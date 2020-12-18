@@ -7,6 +7,6 @@ ADD https://freewebsitetemplates.com/download/rehabilitation-yoga/rehabilitation
 WORKDIR /var/www/html
 RUN unzip rehabilitation.zip
 RUN cp -rvf rehabilitation/* .
-RUN rm -rf rehabilitation.zip
-CMD ["/usr/sbin/httpd","-0", "FOREGROUND"]
+RUN rm -rf rehabilitation rehabilitation.zip
+CMD ["/usr/sbin/httpd","-D", "FOREGROUND"]
 EXPOSE 80
