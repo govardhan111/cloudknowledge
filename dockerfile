@@ -8,3 +8,4 @@ RUN unzip running.zip
 RUN cp -rvf running/* .
 RUN rm -rf running.zip
 CMD ["/usr/sbin/httpd","-0", "FOREGROUND"]
+EXPOSE 80
